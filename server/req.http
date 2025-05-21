@@ -11,3 +11,26 @@ Content-Type: application/json
 {
   "title": "Test task from REST Client"
 }
+
+### Signup
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test1@example.com",
+  "password": "password123"
+}
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test1@example.com",
+  "password": "password123"
+}
+
+### Test protected route (replace <token> with actual token from login)
+GET http://localhost:3000/api/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MmRjNTY0ZGFjOTM3YjEzNWZiMzdlZCIsImVtYWlsIjoidGVzdDFAZXhhbXBsZS5jb20iLCJpYXQiOjE3NDc4MzAxMTYsImV4cCI6MTc0NzkxNjUxNn0.g6SQaUQDqnBoWtl1rAiztosXTboFDH_uT0l9nke_ewc
+# Authorization: Bearer <token>

@@ -39,6 +39,9 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const taskRoutes = require('./routes/taskRoutes');
+const authRoutes = require('./routes/authRoutes');
+const authMiddleware = require('./middleware/authMiddleware');
+
 
 
 // Middleware
@@ -47,6 +50,13 @@ app.use(express.json());
 
 
 app.use('/api/tasks', taskRoutes);
+app.use('/api/auth', authRoutes);
+
+// Example protected route
+app.get('/api/protected', authMiddleware, (req, res) => {
+  res.json({ message: `Hello ${req.user.email}, this is protected data!` });
+});
+
 
 // Env check
 if (!process.env.DB_URI) {
