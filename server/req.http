@@ -1,0 +1,13 @@
+### Ping server
+GET http://localhost:3000/
+
+### Get all tasks
+GET http://localhost:3000/api/tasks
+
+### Create a new task
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Test task from REST Client"
+}
