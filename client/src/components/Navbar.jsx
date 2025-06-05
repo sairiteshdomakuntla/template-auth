@@ -101,32 +101,30 @@ export default function Navbar() {
                   </span>
                 </button>
               ) : (
-                <div className="space-x-3">
-                  <Link 
-                    to="/login" 
-                    className="px-4 py-2 rounded-lg border border-indigo-200 text-indigo-700 hover:bg-indigo-50
-                              transition-all shadow-sm hover:shadow font-medium"
-                  >
-                    <span className="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                      </svg>
-                      Login
-                    </span>
-                  </Link>
-                  <Link 
-                    to="/signup" 
-                    className="px-4 py-2 rounded-lg shadow bg-gradient-to-r from-indigo-600 to-purple-600
-                              hover:from-indigo-700 hover:to-purple-700 text-white transition-all hover:shadow-md font-medium"
-                  >
-                    <span className="flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                      </svg>
-                      Sign Up
-                    </span>
-                  </Link>
-                </div>
+<div className="flex items-center space-x-3">
+  <Link 
+    to="/login" 
+    className="inline-flex items-center px-4 py-2 rounded-lg border border-indigo-200 text-indigo-700 hover:bg-indigo-50
+               transition-all shadow-sm hover:shadow font-medium"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+    </svg>
+    Login
+  </Link>
+
+  <Link 
+    to="/signup" 
+    className="inline-flex items-center px-4 py-2 rounded-lg shadow-sm bg-gradient-to-r from-indigo-600 to-purple-600
+               hover:from-indigo-700 hover:to-purple-700 text-white transition-all hover:shadow font-medium"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+    </svg>
+    Sign Up
+  </Link>
+</div>
+
               )}
             </div>
           </div>
